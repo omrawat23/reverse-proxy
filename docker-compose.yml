@@ -1,0 +1,14 @@
+name: reverse-proxy
+
+services:
+ reverse-proxy-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    ports:
+      - "8080:8080"
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/app
