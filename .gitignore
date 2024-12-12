@@ -1,0 +1,49 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+/dist
+/build
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Directory for the VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# NPM package lock
+package-lock.json
+
+# Next.js build directory
+.next/
+
+# TypeScript output directory
+/lib/
+
+# Test coverage output
+coverage/
+
+# JetBrains IDEs (IntelliJ, WebStorm, PhpStorm)
+.idea/
+
+# Firebase Emulators
+firebase-debug.log
+.firebaserc
+
+# Tailwind CSS build output
+.tailwind/
+
+# React Native
+.expo/

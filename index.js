@@ -26,10 +26,10 @@ docker.getEvents((err, stream) => {
             const containerName = containerInfo.Name.substring(1);
             const ipAddress = containerInfo.NetworkSettings.IPAddress;
 
-            const exposedPorts = Object.keys(containerInfo.Config.ExposedPorts || {});
+            const exposedPorts = containerInfo.Config.ExposedPorts ? Object.keys(containerInfo.Config.ExposedPorts) : [];
             let defaultPort = null;
 
-            if (exposedPorts && exposedPorts.length > 0) {
+            if (exposedPorts.length > 0) {
                 const [port, type] = exposedPorts[0].split("/");
                 if (type === "tcp") {
                     defaultPort = port;
